@@ -73,6 +73,8 @@ namespace FluentValidation.Tests {
 			validator.RuleFor(x => x.Forename).NotNull().WithErrorCode("ErrCode101");
 			var result = validator.Validate(new Person());
 			result.Errors[0].ErrorCode.ShouldEqual("ErrCode101");
+
+            //Let say another change
 		}
 
 		[Fact]
