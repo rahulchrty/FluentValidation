@@ -65,6 +65,7 @@ namespace FluentValidation.Tests {
 			validator.RuleFor(x => x.Forename).NotNull().WithMessage("Foo");
 			var result = validator.Validate(new Person());
 			result.Errors[0].ErrorMessage.ShouldEqual("Foo");
+            //This line is invalid
 		}
 
 		[Fact]
